@@ -10,12 +10,11 @@ public class Main {
         double fuelConsuptionOnOneKm = fuelConsuption / 100; //fuel consumption in 1 kilometer
 
         System.out.println("Enter the amount of fuel");
-        double fuelVolume = scanner.nextDouble();//fuel remaining
+        int fuelVolume = scanner.nextInt();//fuel remaining
         System.out.println("Your amount of fuel is " + fuelVolume + " liters");
 
-        double distance = fuelVolume / fuelConsuptionOnOneKm;
-        int roundedDistance = (int) distance;
-        System.out.println("The distance you can drive is " + roundedDistance + " km");
+        int distance = (int) (fuelVolume / fuelConsuptionOnOneKm);
+        System.out.println("The distance you can drive is " + distance + " km");
         scanner.close();
 
     }
